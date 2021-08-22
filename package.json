@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rm -rf public && mkdir public && echo 'Custom Build' > ./public/index.html",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "@octokit/graphql": "^4.6.4",
+    "@octokit/rest": "^18.9.1",
+    "@octokit/webhooks": "^9.12.0",
+    "lodash": "^4.17.21",
+    "log4js": "^6.3.0"
+  },
+  "devDependencies": {
+    "@octokit/webhooks-definitions": "^3.67.3",
+    "@types/lodash": "^4.14.172",
+    "@types/node": "^16.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "concurrently": "^6.2.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "smee-client": "^1.2.2",
+    "typescript": "^4.3.5"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix"
+    ]
+  }
+}
